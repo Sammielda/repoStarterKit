@@ -20,4 +20,12 @@ const HomePage = () => {
   );
 }
 
+// Create a function to print a greeting
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+// Call the function with a name
+greet("World");
+
 export default HomePage;
