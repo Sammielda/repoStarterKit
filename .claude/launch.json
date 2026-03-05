@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Express Server",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["nodemon", "server/index.js"],
+      "port": 8080
+    },
+    {
+      "name": "Webpack Watcher",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 3000
+    }
+  ]
+}
