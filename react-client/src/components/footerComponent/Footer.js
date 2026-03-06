@@ -2,10 +2,16 @@ import React from 'react';
 
 const Footer = () => (
   <footer>
-    <div>
-      <p>Footer component</p>
-      <p>This is where some additional notes about your website go.</p>
-    </div>
+    <span>© {new Date().getFullYear()} Samuel Charris Photography</span>
+    <span className="footer-divider">·</span>
+    <a
+      href="https://www.instagram.com/samuelcharriss"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="footer-link"
+    >
+      @samuelcharriss
+    </a>
   </footer>
 );
 
