@@ -10,9 +10,6 @@ import img1088 from '../../images/DSCF1088.jpg';
 import img1096 from '../../images/DSCF1096.jpg';
 import img4120 from '../../images/DSCF4120.jpg';
 import img4121 from '../../images/DSCF4121.jpg';
-import img2507 from '../../images/DSCF2507.jpg';
-import img2509 from '../../images/DSCF2509.jpg';
-
 const photos = [
   { id: 1,  category: 'Landscape', title: 'Golden Wildflowers',      price: 20, printPrice: 65, src: img4226 },
   { id: 2,  category: 'Landscape', title: 'City at Dusk',            price: 20, printPrice: 65, src: img4263 },
@@ -24,8 +21,6 @@ const photos = [
   { id: 8,  category: 'Events',    title: 'Sumaq Kitchen',           price: 12, printPrice: 38, src: img1096 },
   { id: 9,  category: 'Events',    title: 'SAVU Restaurant',         price: 12, printPrice: 38, src: img4120 },
   { id: 10, category: 'Events',    title: 'SAVU Ambiance',           price: 12, printPrice: 38, src: img4121 },
-  { id: 11, category: 'Events',    title: 'Oshen Party',             price: 10, printPrice: 32, src: img2507 },
-  { id: 12, category: 'Events',    title: 'Night Celebration',       price: 10, printPrice: 32, src: img2509 },
 ];
 
 const categories = ['All', 'Landscape', 'Portraits', 'Events'];
