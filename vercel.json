@@ -1,5 +1,6 @@
 {
-  "buildCommand": "cd react-client && npm install --prefix .. && npx webpack --mode production",
+  "installCommand": "npm install --legacy-peer-deps",
+  "buildCommand": "npx webpack --mode production",
   "outputDirectory": "react-client/dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }

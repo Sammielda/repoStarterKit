@@ -16,3 +16,4 @@ personal/
 
 # Ignore a specific file
 my_notes.txtreact-client/dist/
+.vercel
