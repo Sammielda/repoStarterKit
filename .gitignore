@@ -15,5 +15,6 @@ node_modules/
 personal/
 
 # Ignore a specific file
-my_notes.txtreact-client/dist/
+my_notes.txt
+client/dist/
 .vercel

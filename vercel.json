@@ -1,7 +1,7 @@
 {
-  "installCommand": "npm install --legacy-peer-deps",
-  "buildCommand": "npx webpack --mode production && cp react-client/src/index.html react-client/dist/index.html && cp react-client/src/styles.css react-client/dist/styles.css",
-  "outputDirectory": "react-client/dist",
+  "installCommand": "npm install",
+  "buildCommand": "npx vite build",
+  "outputDirectory": "client/dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
