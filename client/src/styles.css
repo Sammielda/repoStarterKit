@@ -923,6 +923,172 @@ a {
   opacity: 0.6;
 }
 
+/* ─── COFFEE CART PAGE ───────────────────────────────── */
+.coffee-cart-page {
+  padding-top: 68px;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* Hero */
+.cart-hero {
+  position: relative;
+  height: 80vh;
+  min-height: 500px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.cart-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.cart-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  opacity: 0.5;
+}
+
+.cart-hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(17, 20, 8, 0.98) 0%,
+    rgba(17, 20, 8, 0.4) 50%,
+    rgba(17, 20, 8, 0.1) 100%
+  );
+}
+
+.cart-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 80px 80px;
+  width: 100%;
+}
+
+.cart-hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.cart-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 6vw, 88px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: var(--cream);
+  margin-bottom: 24px;
+}
+
+.cart-hero-title em {
+  font-style: italic;
+  color: var(--sand);
+}
+
+.cart-hero-sub {
+  font-size: 15px;
+  color: var(--cream-dim);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 36px;
+}
+
+.cart-hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Menu / Packages */
+.cart-menu {
+  padding: 80px 80px 64px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cart-menu-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-eyebrow {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.cart-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.cart-menu-item {
+  position: relative;
+}
+
+.menu-price {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sand);
+  letter-spacing: 1px;
+  padding: 6px 16px;
+  border: 1px solid rgba(196, 172, 132, 0.2);
+  border-radius: var(--glass-radius-pill);
+  background: rgba(196, 172, 132, 0.06);
+  box-shadow: var(--glass-inset);
+}
+
+/* Event Gallery */
+.cart-gallery-section {
+  padding: 80px 80px 64px;
+  border-bottom: 1px solid var(--border);
+}
+
+.cart-gallery-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.cart-gallery {
+  columns: 3;
+  column-gap: 4px;
+}
+
+.cart-gallery-item {
+  break-inside: avoid;
+  margin-bottom: 4px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.cart-gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.cart-gallery-item:hover img {
+  transform: scale(1.03);
+}
+
 /* ─── COMPAT ─────────────────────────────────────────── */
 .btn-primary {
   background: rgba(75, 90, 30, 0.55);
@@ -1410,6 +1576,59 @@ a {
     width: 100%;
     text-align: center;
     min-height: var(--touch-min);
+  }
+
+  /* ── COFFEE CART — Mobile ── */
+  .coffee-cart-page {
+    padding-top: 0;
+    padding-bottom: calc(var(--tab-bar-height) + var(--safe-bottom));
+  }
+
+  .cart-hero {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 500px;
+  }
+
+  .cart-hero-content {
+    padding: 0 var(--mobile-pad) 32px;
+  }
+
+  .cart-hero-title {
+    font-size: clamp(36px, 10vw, 60px);
+  }
+
+  .cart-hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .cart-hero-cta .btn-olive,
+  .cart-hero-cta .btn-ghost {
+    text-align: center;
+    min-height: var(--touch-min);
+  }
+
+  .cart-menu {
+    padding: 48px var(--mobile-pad);
+  }
+
+  .cart-menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-gallery-section {
+    padding: 48px var(--mobile-pad);
+  }
+
+  .cart-gallery {
+    columns: 2;
+    column-gap: 2px;
+  }
+
+  .cart-gallery-item {
+    margin-bottom: 2px;
   }
 
   /* ── PORTFOLIO — Hero ── */

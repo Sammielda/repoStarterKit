@@ -16,9 +16,7 @@ const route = useRoute()
       <li><span class="chevron">&#x203A;</span></li>
       <li><router-link to="/about" class="nav-link">About</router-link></li>
       <li><span class="chevron">&#x203A;</span></li>
-      <li><router-link to="/features" class="nav-link">Features</router-link></li>
-      <li><span class="chevron">&#x203A;</span></li>
-      <li><router-link to="/services" class="nav-link">Services</router-link></li>
+      <li><router-link to="/coffee-cart" class="nav-link">Coffee Cart</router-link></li>
       <li><span class="chevron">&#x203A;</span></li>
       <li><router-link to="/portfolio" class="nav-link">Portfolio</router-link></li>
       <li><span class="chevron">&#x203A;</span></li>
