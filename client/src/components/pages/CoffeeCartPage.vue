@@ -1,6 +1,17 @@
-<script setup>
-const heroImg = '/images/DSCF1088.jpg'
+<!--
+  CoffeeCartPage.vue — Mobile espresso bar service page (route: /coffee-cart)
+  Sections:
+    1. Hero — full-screen background image with service tagline and CTA buttons
+    2. Packages — 3 glass cards (Espresso Bar, Specialty Drinks, Full Service) with pricing
+    3. Event Gallery — 3-column masonry grid (2-col on mobile) of past event photos
+    4. Booking CTA — call-to-action with email link and portfolio link
+-->
 
+<script setup>
+// Hero background image — La Marzocco setup with grinder + Immigrant Culture bag
+const heroImg = '/images/DSCF8678.jpg'
+
+// Service packages — rendered as numbered glass cards
 const packages = [
   {
     num: '01',
@@ -22,13 +33,14 @@ const packages = [
   },
 ]
 
+// Gallery photos — coffee cart setup + portafilter closeup + past events
 const galleryPhotos = [
+  '/images/DSCF8678.jpg',
+  '/images/DSCF8350.jpg',
   '/images/DSCF1088.jpg',
   '/images/DSCF1096.jpg',
   '/images/DSCF4120.jpg',
   '/images/DSCF4121.jpg',
-  '/images/gallery/DSCF0308.jpg',
-  '/images/gallery/DSCF0723.jpg',
 ]
 </script>
 

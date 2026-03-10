@@ -1,6 +1,19 @@
+<!--
+  PortfolioPage.vue — Photo portfolio with filtering and lightbox (route: /portfolio)
+  Features:
+    - Category filter bar (All, Landscape, Portraits, Events, Gallery)
+    - Masonry photo grid with hover overlay showing title, category, and purchase buttons
+    - Full-screen lightbox modal with download/print options
+  State:
+    - active: currently selected filter category
+    - lightbox: photo object currently open in lightbox (null = closed)
+    - hoveredId: tracks which card is being hovered for overlay visibility
+-->
+
 <script setup>
 import { ref, computed } from 'vue'
 
+// Photo catalog — each entry has id, category, title, prices, and image path
 const photos = [
   { id: 1,  category: 'Landscape', title: 'Golden Wildflowers',      price: 20, printPrice: 65, src: '/images/DSCF4226.jpg' },
   { id: 2,  category: 'Landscape', title: 'City at Dusk',            price: 20, printPrice: 65, src: '/images/DSCF4263.jpg' },
@@ -63,12 +76,15 @@ const photos = [
   { id: 59, category: 'Gallery',   title: 'IMG 2145',               price: 12, printPrice: 38, src: '/images/gallery/IMG_2145.jpg' },
 ]
 
+// Available filter categories shown in the filter bar
 const categories = ['All', 'Landscape', 'Portraits', 'Events', 'Gallery']
 
-const active = ref('All')
-const lightbox = ref(null)
-const hoveredId = ref(null)
+// Reactive state
+const active = ref('All')         // Current filter — 'All' shows everything
+const lightbox = ref(null)        // Photo object open in lightbox (null = closed)
+const hoveredId = ref(null)       // ID of photo card being hovered (for overlay)
 
+// Computed: returns filtered photo array based on active category
 const filtered = computed(() =>
   active.value === 'All' ? photos : photos.filter(p => p.category === active.value)
 )
@@ -76,12 +92,14 @@ const filtered = computed(() =>
 
 <template>
   <div class="portfolio-page">
+    <!-- Hero section — page title and subtitle -->
     <div class="portfolio-hero">
       <p class="portfolio-eyebrow">Photography Portfolio</p>
       <h1 class="portfolio-heading">Moments Worth <span class="accent">Owning</span></h1>
       <p class="portfolio-sub">Browse, download, or order a fine art print of any photo.</p>
     </div>
 
+    <!-- Category filter bar — pill-shaped glass buttons -->
     <div class="filter-bar">
       <button
         v-for="cat in categories"
@@ -93,6 +111,7 @@ const filtered = computed(() =>
       </button>
     </div>
 
+    <!-- Masonry photo grid — CSS columns layout, lazy-loaded images -->
     <div class="photo-grid">
       <div
         v-for="photo in filtered"
@@ -118,7 +137,7 @@ const filtered = computed(() =>
       </div>
     </div>
 
-    <!-- Lightbox -->
+    <!-- Lightbox modal — opens on photo click, closes on backdrop click or × button -->
     <div v-if="lightbox" class="lightbox" @click="lightbox = null">
       <div class="lightbox-inner" @click.stop>
         <button class="lightbox-close" @click="lightbox = null">&#10005;</button>

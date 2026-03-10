@@ -1,15 +1,26 @@
+<!--
+  AboutPage.vue — About / bio page (route: /about)
+  Sections:
+    1. Oversized name header — large "SAMUEL CHARRIS" display text
+    2. Photo + Bio — split layout with headshot and bio paragraph
+    3. Process — 3-step numbered cards explaining the workflow
+    4. Services — 4-item grid (Portraits, Events, Landscapes, Video)
+    5. CTA — call-to-action to get in touch or view portfolio
+-->
+
 <script setup>
+// Headshot photo for the bio section
 const headshot = '/images/headshot.jpg'
 </script>
 
 <template>
   <div class="about-page">
-    <!-- Oversized Name -->
+    <!-- Oversized Name — full-width display heading -->
     <div class="about-name-block">
       <h1 class="about-big-name">SAMUEL CHARRIS</h1>
     </div>
 
-    <!-- Photo + Bio -->
+    <!-- Photo + Bio — two-column split: headshot left, bio text right -->
     <div class="about-split">
       <div class="about-photo-side">
         <img :src="headshot" alt="Samuel Charris" class="about-photo" />
@@ -39,7 +50,7 @@ const headshot = '/images/headshot.jpg'
       </div>
     </div>
 
-    <!-- Process -->
+    <!-- Process — 3 numbered glass cards describing the client workflow -->
     <div class="about-process">
       <div class="about-process-header">
         <p class="portfolio-eyebrow">What Working With Me Looks Like</p>
@@ -76,7 +87,7 @@ const headshot = '/images/headshot.jpg'
       </div>
     </div>
 
-    <!-- Services -->
+    <!-- Services — 4-item grid listing photography/video offerings -->
     <div class="about-services">
       <div class="about-service-item">
         <h3>Portraits</h3>
@@ -96,7 +107,7 @@ const headshot = '/images/headshot.jpg'
       </div>
     </div>
 
-    <!-- CTA -->
+    <!-- CTA — final call-to-action with "Get In Touch" and "View Portfolio" buttons -->
     <div class="about-cta">
       <p class="portfolio-eyebrow">Ready?</p>
       <h2 class="about-heading">

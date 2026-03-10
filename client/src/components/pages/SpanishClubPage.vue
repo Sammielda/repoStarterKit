@@ -1,8 +1,19 @@
+<!--
+  SpanishClubPage.vue — Spanish Club event gallery (route: /spanish-club)
+  Displays a masonry grid of photos from Spanish Club events.
+  Features:
+    - No category filter (single event, all photos shown)
+    - Click-to-open lightbox with "Order Print" link to Pixieset
+    - Lazy-loaded images for performance
+-->
+
 <script setup>
 import { ref } from 'vue'
 
+// External print ordering link (Pixieset gallery)
 const PIXIESET_GALLERY = 'https://sam6757.pixieset.com/portfoliolandscape/'
 
+// Spanish Club event photos — served from /public/images/spanishclub/
 const photos = [
   { id: 1,  src: '/images/spanishclub/DSCF5093.jpg' },
   { id: 2,  src: '/images/spanishclub/DSCF5095.jpg' },
@@ -50,6 +61,7 @@ const photos = [
   { id: 44, src: '/images/spanishclub/DSCF5283.jpg' },
 ]
 
+// Lightbox state — holds the photo object currently being viewed (null = closed)
 const lightbox = ref(null)
 </script>
 

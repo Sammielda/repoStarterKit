@@ -1,10 +1,24 @@
+<!--
+  HomePage.vue — Landing page (route: /)
+  Full-page marketing layout with:
+    1. Hero — full-screen background image with title, tagline, and CTA buttons
+    2. Marquee — infinite scrolling ticker of service categories
+    3. Landscape panel — split image + text showcasing landscape photography
+    4. Stats bar — key numbers (prints available, categories, downloads)
+    5. Portrait panel — reversed split layout for portrait work
+    6. Events panel — split layout for event/hospitality photography
+    7. CTA section — final call-to-action with background image
+-->
+
 <script setup>
+// Hero and section background images (served from /public/images/)
 const heroImg = '/images/DSCF4323.jpg'
 const landscapeImg = '/images/DSCF4226.jpg'
 const portraitImg = '/images/DSCF3554.jpg'
 const eventImg = '/images/DSCF1088.jpg'
 const ctaImg = '/images/DSCF4263.jpg'
 
+// Marquee items — duplicated for seamless infinite scroll animation
 const marqueeItems = [
   'Landscape Photography',
   'Fine Art Prints',

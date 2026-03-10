@@ -1,16 +1,28 @@
+<!--
+  Footer.vue — Global site footer
+  Two-column layout on desktop (brand left, contact right), stacked on mobile.
+  Includes:
+    - Brand logo + name
+    - Social media icon links (Instagram, TikTok, X)
+    - Contact details (location, email, phone)
+    - Dynamic copyright year
+-->
+
 <script setup>
+// Auto-update copyright year
 const year = new Date().getFullYear()
 </script>
 
 <template>
   <footer class="site-footer">
     <div class="footer-inner">
-      <!-- Left: Brand + Socials -->
+      <!-- Left column: Brand logo + social media links -->
       <div class="footer-brand">
         <div class="footer-logo">
           <div class="logo-icon logo-initials">SC</div>
           <span class="footer-logo-text">Samuel Charris<br/>Photography</span>
         </div>
+        <!-- Social media icon links — open in new tab -->
         <div class="footer-socials">
           <!-- Instagram -->
           <a href="https://www.instagram.com/samuelcharriss" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
@@ -35,7 +47,7 @@ const year = new Date().getFullYear()
         </div>
       </div>
 
-      <!-- Right: Contact + Copyright -->
+      <!-- Right column: Contact details + copyright -->
       <div class="footer-info">
         <div class="footer-contact">
           <span>Charlotte, NC</span>
